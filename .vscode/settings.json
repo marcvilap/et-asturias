@@ -1,0 +1,15 @@
+{
+	"search.exclude": {
+		".astro": true,
+		".vercel": true,
+		".vscode": true,
+		"dist": true,
+		"node_modules": true,
+		"package-lock.json": true,
+		"pnpm-lock.yaml": true
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.documentSelectors": ["**/*.astro"],
+	"files.associations": { "*.css": "tailwindcss" }
+}

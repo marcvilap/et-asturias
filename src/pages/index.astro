@@ -1,0 +1,144 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+import imgLogo from '$assets/images/logo.webp'
+import img01 from '$assets/images/01.webp'
+import img02 from '$assets/images/02.webp'
+import img03 from '$assets/images/03.webp'
+import img04 from '$assets/images/04.webp'
+import img05 from '$assets/images/05.webp'
+import img06 from '$assets/images/06.webp'
+import img07 from '$assets/images/07.webp'
+import img08 from '$assets/images/08.webp'
+import img09 from '$assets/images/09.webp'
+---
+
+<Layout>
+	<section class="relative overflow-clip bg-green-950 text-orange-100">
+		<Image class="absolute left-0 top-0 size-full object-cover blur" src={img01} width={1920} quality={90} alt="" />
+		<div class="container relative flex min-h-screen flex-col gap-8 pb-8 pt-20">
+			<a class="flex items-center justify-start gap-4 self-start" href="/">
+				<div class="grid text-xs text-white">
+					<strong>Paraíso Natural </strong>
+					<span>Un proyecto de</span>
+				</div>
+				<Image class="w-40" src={imgLogo} width={240} densities={[2]} quality={90} alt="" />
+			</a>
+			<div class="reveal m-auto max-w-md">
+				<h1 class="text-right font-serif text-4xl font-bold reveal:translate-x-24 reveal:opacity-0 revealed:delay-200">Un paseo por el norte:</h1>
+				<div class="relative my-4">
+					<Image class="reveal:scale-90 reveal:opacity-0 revealed:delay-100" src={img01} width={1920} quality={90} alt="" />
+					<span class="absolute -left-8 -top-8 size-20 border-l-2 border-t-2 border-lime-200 reveal:translate-x-24 reveal:translate-y-24 reveal:opacity-0 revealed:delay-300"></span>
+					<span class="absolute -bottom-8 -right-8 size-20 border-b-2 border-r-2 border-lime-200 reveal:-translate-x-24 reveal:-translate-y-24 reveal:opacity-0 revealed:delay-300"></span>
+				</div>
+				<h2 class="font-serif text-xl italic reveal:-translate-x-24 reveal:opacity-0 revealed:delay-200">Súbete a un AVE al paraíso</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="relative overflow-clip bg-green-950 py-24 text-orange-100">
+		<div class="absolute -top-32 left-1/2 w-[89rem] -translate-x-1/2 text-green-700">
+			<Icon class="animate-parallax-t" name="line1" />
+		</div>
+		<div class="absolute -bottom-40 left-1/2 w-[87rem] -translate-x-1/2 text-lime-200">
+			<Icon class="animate-parallax-b" name="line2" />
+		</div>
+		<div class="reveal container relative">
+			<p class="mx-auto max-w-xl text-center font-serif text-2xl font-bold leading-snug reveal:translate-y-24 reveal:opacity-0 lg:mb-48 lg:mt-24 lg:text-3xl">Un tren puede cambiar la fisionomía de un mapa. La Alta Velocidad Ferroviaria, que ha acortado las distancias al <a class="underline" target="_blank" href="https://www.turismoasturias.es/">Paraíso Natural</a>, está próxima a cumplir un año, acercando más aún una tierra donde la gastronomía es una forma de convivencia, el turismo rural, arrullo y paz, las playas, retiros de arena y piedra, y el paisaje, el marco fabuloso que otorga al viaje la condición de escapada privilegiada.</p>
+		</div>
+	</section>
+
+	<section class="overflow-clip py-24">
+		<div class="container grid gap-8 xl:max-w-6xl">
+			<div class="reveal grid gap-8 md:grid-cols-2">
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img02} width={696} quality={90} densities={[2]} alt="" />
+				<div class="flex items-center justify-center bg-green-950 p-8 text-center text-lime-200 reveal:scale-90 reveal:opacity-0">
+					<p class="max-w-64 font-serif text-2xl leading-snug">Si además aprovechas el otoño, cuando ese entorno muta de colores y posibilidades, el AVE tiene la capacidad de pintar Asturias como un destino inevitable.</p>
+				</div>
+			</div>
+			<div class="reveal grid gap-8 md:grid-cols-3">
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img03} width={448} quality={90} densities={[2]} alt="" />
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img04} width={448} quality={90} densities={[2]} alt="" />
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img05} width={448} quality={90} densities={[2]} alt="" />
+			</div>
+			<div class="reveal grid gap-8 md:grid-cols-2">
+				<div class="flex items-center justify-center bg-lime-200 p-8 text-green-950 reveal:scale-90 reveal:opacity-0">
+					<p class="max-w-68 text-sm">El Principado despliega en otoño un esplendor único. Los más de 300 osos, que viven libremente en su hábitat, asoman. Los bosques enrojecen. Los ríos vuelven a recobrar caudal tras el estío, invitando a descensos, como los senderos. Las playas despobladas convierten los bautismos de surf en una experiencia personal, en pequeños grupos. Las decenas de especies ornitológicas, del buitre al águila o las aves migratorias, obligan a levantar la vista.</p>
+				</div>
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img06} width={696} quality={90} densities={[2]} alt="" />
+			</div>
+		</div>
+	</section>
+
+	<section class="relative overflow-clip bg-green-950 py-24 text-orange-100">
+		<div class="absolute left-1/2 top-40 w-[100rem] -translate-x-1/2 text-green-700">
+			<Icon class="animate-parallax-b" name="line3" />
+		</div>
+		<div class="absolute -right-32 -top-32 w-[27rem] text-green-700 lg:text-lime-200">
+			<Icon class="animate-parallax-t" name="line4" />
+		</div>
+		<div class="container relative xl:max-w-6xl">
+			<div class="reveal mx-auto mb-12 max-w-sm lg:mb-24">
+				<p class="reveal:translate-y-24 reveal:opacity-0">Asturias cuenta con un aliciente especial: Oviedo/Uviéu es la Capital Española de la Gastronomía durante este 2024. Un motivo más que viene a ratificar el excepcional momento de la gastronomía asturiana. El Principado la ha agrupado bajo la campaña “Cocina de Paisaje”, que reivindica el ciclo culinario desde el productor al comensal. Los casi cien embajadores de “Cocina de Paisaje” son una muestra del valor social de esta cocina, entre los que se encuentran los galardonados con las 12 estrellas Michelin y 43 soles de la Guía Repsol, pero, sobre todo, los miles de establecimientos, sidrerías y restaurantes, repartidos por toda la comunidad autónoma donde calidad y vínculo local son indisociables.</p>
+			</div>
+			<div class="reveal">
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img07} width={1440} quality={90} densities={[2]} alt="" />
+			</div>
+		</div>
+	</section>
+
+	<section class="grid overflow-clip md:grid-cols-2">
+		<div class="py-24">
+			<div class="reveal container">
+				<Image class="reveal:scale-90 reveal:opacity-0" src={img08} width={672} quality={90} densities={[2]} alt="" />
+			</div>
+		</div>
+		<div class="flex items-center bg-lime-200 py-24 text-green-950">
+			<div class="reveal container">
+				<p class="mx-auto max-w-104 text-center font-serif text-2xl leading-snug reveal:scale-90 reveal:opacity-0">Asturias permite bajar el frenético ritmo cotidiano, sea a través de la buena mesa, o del simple relax. El tiempo se detiene de la mejor forma posible, esa en la que tu cabeza se vacía de preocupaciones y te permite estar más despierto durante el día y dormir mejor por la noche. La <a class="font-bold underline" target="_blank" href="https://www.turismoasturias.es/">oferta turística</a> es variada, ya sabes: solo, en familia, en pareja o en grupo; y siempre, con tus mascotas.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="relative overflow-clip bg-green-950 py-24 text-orange-100">
+		<Image class="absolute left-0 top-0 size-full object-cover opacity-10" src={img01} width={1920} quality={90} alt="" />
+		<div class="container relative xl:max-w-6xl">
+			<div class="reveal items-center lg:grid lg:grid-cols-2">
+				<div class="grid gap-6 reveal:scale-90 reveal:opacity-0 max-lg:mb-12 lg:pr-24">
+					<p>Lo puedes comprobar en cualquiera de las ciudades, o en las villas y pueblos, con un turismo rural pionero en su sostenibilidad, pues se alimenta día a día con una forma de cuidar del patrimonio natural y social. Sea cual sea tu ocio particular, cicloturismo, senderismo, turismo industrial, ecoturismo, Camino de Santiago, o simplemente pasear, visitar museos, descubrir rincones de montaña y de costa, la escapada a Asturias, que el AVE ha consolidado en menos de un año, te abrirá todavía más los ojos durante este otoño.</p>
+					<p>Y si el AVE te pilla un poco a desmano, recuerda que tienes con conexiones aéreas directas con 17 aeropuertos de toda España, para escaparte al <a class="font-bold underline" target="_blank" href="https://www.turismoasturias.es/">Paraíso Natural</a>.</p>
+				</div>
+				<div class="relative px-16 reveal:scale-90 reveal:opacity-0">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<Image class="mx-auto" src={img09} width={528} quality={90} densities={[2]} alt="" />
+							</div>
+							<div class="swiper-slide">
+								<Image class="mx-auto" src={img08} width={528} quality={90} densities={[2]} alt="" />
+							</div>
+							<div class="swiper-slide">
+								<Image class="mx-auto" src={img06} width={528} quality={90} densities={[2]} alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination absolute inset-x-0 -bottom-6 flex justify-center gap-2"></div>
+					<button class="swiper-prev absolute left-0 top-1/2 -mt-5 w-10 text-lime-200 transition-colors hover:text-white">
+						<Icon name="prev" />
+					</button>
+					<button class="swiper-next absolute right-0 top-1/2 -mt-5 w-10 text-lime-200 transition-colors hover:text-white">
+						<Icon name="next" />
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="overflow-clip bg-green-950 py-24 text-orange-100">
+		<div class="reveal container">
+			<p class="mb-4 text-center text-sm reveal:translate-y-24 reveal:opacity-0">ElTiempo Content para</p>
+			<Image class="mx-auto w-40 reveal:translate-y-24 reveal:opacity-0" src={imgLogo} width={240} densities={[2]} quality={90} alt="" />
+		</div>
+	</footer>
+</Layout>

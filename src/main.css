@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Be Vietnam Pro';
+		font-style: normal;
+		font-weight: 400;
+		font-display: 'swap';
+		src: url(./assets/fonts/be-vietnam-pro-regular.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Awesome Serif';
+		font-style: normal;
+		font-weight: 400;
+		font-display: 'swap';
+		src: url(./assets/fonts/awesome-serif-regular.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Awesome Serif';
+		font-style: normal;
+		font-weight: 700;
+		font-display: 'swap';
+		src: url(./assets/fonts/awesome-serif-bold.woff2) format('woff2');
+	}
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	@media (min-width: 1281px) {
+		html {
+			font-size: 1.25vw;
+		}
+	}
+	@media (min-width: 1920px) {
+		html {
+			font-size: 24px;
+		}
+	}
+	html {
+		@apply touch-manipulation antialiased;
+	}
+}
+
+@layer components {
+	.revealed [class*='reveal:'] {
+		transition-duration: 1s;
+		transition-property: opacity, transform;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		will-change: opacity, transform;
+	}
+}
+
+.swiper-pagination-bullet {
+	@apply size-2 cursor-pointer rounded-full bg-white;
+}
+.swiper-pagination-bullet-active {
+	@apply bg-green-700;
+}
+
+@supports (animation-timeline: view()) {
+	@keyframes --parallax-y {
+		from {
+			transform: translateY(6rem);
+		}
+		to {
+			transform: translateY(-6rem);
+		}
+	}
+	.animate-parallax-t,
+	.animate-parallax-b {
+		animation: --parallax-y linear both;
+		animation-timeline: view(-6rem);
+	}
+	.animate-parallax-b {
+		animation-direction: reverse;
+	}
+}

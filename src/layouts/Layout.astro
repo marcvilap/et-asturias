@@ -1,0 +1,36 @@
+---
+import 'swiper/css'
+import '../main.css'
+import { ViewTransitions } from 'astro:transitions'
+import NavElTiempo from '$components/NavElTiempo.astro'
+
+const metaTitle = 'ElTiempo Content'
+const metaDescription = ''
+---
+
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="robots" content="noindex,nofollow" />
+		<title>{metaTitle}</title>
+		<meta property="description" content={metaDescription} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="/" />
+		<meta property="og:image" content="/thumbnail.png" />
+		<meta property="og:title" content={metaTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:image" content="/thumbnail.png" />
+		<meta property="twitter:title" content={metaTitle} />
+		<meta property="twitter:description" content={metaDescription} />
+		<link rel="icon" href="/favicon.png" />
+		<ViewTransitions />
+	</head>
+	<body>
+		<NavElTiempo />
+		<slot />
+		<script src="../main.ts"></script>
+	</body>
+</html>
