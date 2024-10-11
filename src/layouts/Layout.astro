@@ -4,8 +4,8 @@ import '../main.css'
 import { ViewTransitions } from 'astro:transitions'
 import NavElTiempo from '$components/NavElTiempo.astro'
 
-const metaTitle = 'ElTiempo Content'
-const metaDescription = ''
+const metaTitle = 'Un paseo por el norte: súbete a un AVE al paraíso'
+const metaDescription = 'Un tren puede cambiar la fisionomía de un mapa. La Alta Velocidad Ferroviaria, que ha acortado las distancias al Paraíso Natural, está próxima a cumplir un año, acercando más aún una tierra donde la gastronomía es una forma de convivencia.'
 ---
 
 <!doctype html>
@@ -26,6 +26,192 @@ const metaDescription = ''
 		<meta property="twitter:title" content={metaTitle} />
 		<meta property="twitter:description" content={metaDescription} />
 		<link rel="icon" href="/favicon.png" />
+		<script type="text/javascript">
+			if (!window.didomiConfig) {
+				window.didomiConfig = {}
+			}
+			if (!window.didomiConfig.notice) {
+				window.didomiConfig.notice = {}
+			}
+			window.didomiConfig.notice.enable = false
+		</script>
+		<script type="text/javascript" data-description="Didomi SDK">
+			window.gdprAppliesGlobally = true
+			;(function () {
+				function n(e) {
+					if (!window.frames[e]) {
+						if (document.body && document.body.firstChild) {
+							var t = document.body
+							var r = document.createElement('iframe')
+							r.style.display = 'none'
+							r.name = e
+							r.title = e
+							t.insertBefore(r, t.firstChild)
+						} else {
+							setTimeout(function () {
+								n(e)
+							}, 5)
+						}
+					}
+				}
+				function e(r, a, o, s, c) {
+					function e(e, t, r, n) {
+						if (typeof r !== 'function') {
+							return
+						}
+						if (!window[a]) {
+							window[a] = []
+						}
+						var i = false
+						if (c) {
+							i = c(e, n, r)
+						}
+						if (!i) {
+							window[a].push({ command: e, version: t, callback: r, parameter: n })
+						}
+					}
+					e.stub = true
+					e.stubVersion = 2
+					function t(n) {
+						if (!window[r] || window[r].stub !== true) {
+							return
+						}
+						if (!n.data) {
+							return
+						}
+						var i = typeof n.data === 'string'
+						var e
+						try {
+							e = i ? JSON.parse(n.data) : n.data
+						} catch (t) {
+							return
+						}
+						if (e[o]) {
+							var a = e[o]
+							window[r](
+								a.command,
+								a.version,
+								function (e, t) {
+									var r = {}
+									r[s] = { returnValue: e, success: t, callId: a.callId }
+									n.source.postMessage(i ? JSON.stringify(r) : r, '*')
+								},
+								a.parameter,
+							)
+						}
+					}
+					if (typeof window[r] !== 'function') {
+						window[r] = e
+						if (window.addEventListener) {
+							window.addEventListener('message', t, false)
+						} else {
+							window.attachEvent('onmessage', t)
+						}
+					}
+				}
+				e('__uspapi', '__uspapiBuffer', '__uspapiCall', '__uspapiReturn')
+				n('__uspapiLocator')
+				e('__tcfapi', '__tcfapiBuffer', '__tcfapiCall', '__tcfapiReturn')
+				n('__tcfapiLocator')
+				;(function (e) {
+					var t = document.createElement('link')
+					t.rel = 'preconnect'
+					t.as = 'script'
+					var r = document.createElement('link')
+					r.rel = 'dns-prefetch'
+					r.as = 'script'
+					var n = document.createElement('link')
+					n.rel = 'preload'
+					n.as = 'script'
+					var i = document.createElement('script')
+					i.id = 'spcloader'
+					i.type = 'text/javascript'
+					i['async'] = true
+					i.charset = 'utf-8'
+					var a = 'https://sdk.privacy-center.org/' + e + '/loader.js?target=' + document.location.hostname
+					if (window.didomiConfig && window.didomiConfig.user) {
+						var o = window.didomiConfig.user
+						var s = o.country
+						var c = o.region
+						if (s) {
+							a = a + '&country=' + s
+							if (c) {
+								a = a + '&region=' + c
+							}
+						}
+					}
+					t.href = 'https://sdk.privacy-center.org/'
+					r.href = 'https://sdk.privacy-center.org/'
+					n.href = a
+					i.src = a
+					var d = document.getElementsByTagName('script')[0]
+					d.parentNode.insertBefore(t, d)
+					d.parentNode.insertBefore(r, d)
+					d.parentNode.insertBefore(n, d)
+					d.parentNode.insertBefore(i, d)
+				})('c9724c50-1caa-40a9-9c18-ef7c27b8e01b')
+			})()
+		</script>
+		<script type="text/javascript" charset="UTF-8">
+			!(function () {
+				var cpBaseUrl = 'https://cp.eltiempo.es'
+				var cpController = cpBaseUrl + '/now.js'
+				var cpPropertyId = '4fb43238'
+
+				!(function (C, o, n, t, P, a, s) {
+					C['CPObject'] = n
+					C[n] ||
+						(C[n] = function () {
+							;(C[n].q = C[n].q || []).push(arguments)
+						})
+					C[n].l = +new Date()
+					a = o.createElement(t)
+					s = o.getElementsByTagName(t)[0]
+					a.src = P
+					s.parentNode.insertBefore(a, s)
+				})(window, document, 'cp', 'script', cpController)
+				cp('create', cpPropertyId, {
+					baseUrl: cpBaseUrl,
+				})
+				cp('render', {
+					onFullConsent: function () {
+						document.cookie = 'consent_state=0; SameSite=strict; Secure; path=/'
+					},
+				})
+				cp('authenticate', function (error, user) {
+					if (error) {
+						return
+					}
+
+					if (user.isLoggedIn() && user.hasValidSubscription()) {
+						document.cookie = 'consent_state=1; SameSite=strict; Secure; path=/'
+					} else {
+						document.cookie = 'consent_state=0; SameSite=strict; Secure; path=/'
+					}
+				})
+			})()
+		</script>
+
+		<!-- No se puede eliminar -->
+		<script>
+			;(function (w, d, s, l, i) {
+				w[l] = w[l] || []
+				w[l].push({
+					'gtm.start': new Date().getTime(),
+					event: 'gtm.js',
+				})
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : ''
+				j.async = true
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+				f.parentNode.insertBefore(j, f)
+			})(window, document, 'script', 'dataLayer', 'GTM-K9DJJ6X')
+		</script>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9DJJ6X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager Eltiempo.es -->
 		<ViewTransitions />
 	</head>
 	<body>
