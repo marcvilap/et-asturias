@@ -13,8 +13,8 @@ El proyecto utiliza las siguientes tecnologías:
 - **CSS**: 6.6%
 
 También usa:
--**Tailwind CSS**
--**Swipper**
+- **Tailwind CSS**
+- **Swipper**
 
 
 ## Descripción
